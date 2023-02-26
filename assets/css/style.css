@@ -1,3 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+* {
+	margin: 0;
+	padding: 0;
+}
 *{
     margin:0;
     padding:0;
@@ -6,39 +11,43 @@
    
 }
 :root{
-    --hotgreen: #183323;
-    --darkgreen: #090d09;
+    --hotgreen: #023535;
+    --darkgreen: #011a1a;
     --lightgreen: #B7F9D1;
     --lightyellow: #E8DD54;
-    --midiumgreen: #11b39b;
+    --midiumgreen: #008F8C;
+    --ticker: #e6d9fa;
   }
 
 body{
     background-color: var(--darkgreen);
    
 }
-.mousemove{
+.header{
     min-height: 100vh;
     width: 100%;
 }
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
-* {
-	margin: 0;
-	padding: 0;
+.header video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index:-1;
+    background: #000000;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color:#0fddc2 ;
+    mix-blend-mode: overlay;
 }
 
-.mousemove {
-	height:100vh;
-	background: linear-gradient(
-        45deg, rgba(1, 3, 1, 22.801),
-               rgba(2, 12, 4, 0.7), 
-               rgba(4, 67, 29, 0.7),
-               rgba(4, 10, 4, 0.7), 
-               rgba(16, 67, 25, 0.7)) 0 0 / 1000% no-repeat, 
-               url(../images/hero.JPG) 0 0 / cover no-repeat;
-	-webkit-animation: gradientAnimation 40s ease infinite;
-	animation: gradientAnimation 40s ease infinite;
-}
 @-webkit-keyframes gradientAnimation {
 	0%   { background-position: 0% 30%, 0 0;}
 	50%  { background-position: 100% 70%, 0 0;}
@@ -79,7 +88,7 @@ body{
     margin:15px 70px;
     width:7%;
     flex:start;
-    z-index: 3;
+    z-index: 4;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
 
@@ -217,7 +226,7 @@ here to remove all anchore and  list effects which were on nave elements
     text-align: center;
     margin-top:8rem;
     padding:30px;
-    background-color:rgba(127, 222, 171, 0.1);
+    
      border-radius: 80px 0px 80px 0px;
 }
 
@@ -233,17 +242,18 @@ p{
     color: var(--lightgreen);
     font-size:20px;  
 }
-.text-box h4{
+.text-box h2{
     margin: 10px 0 20px;
-    font-size:22px;
+    font-size:32px;
     color: var(--lightgreen);
+    font-weight: 400;
     text-align: center;
 }
 
 .hero-btn{
     display: inline-block;
     text-decoration: none;
-    color:var( --lightgreen);
+    color:var( --ticker);
     font-size: 16px;
     border: 1px solid var( --lightgreen);
     padding: 12px 34px;
@@ -257,7 +267,7 @@ p{
 
 
 .hero-btn:hover{
-    border: 1px solid var(--lightyellow);
+    border: 1px solid var(--darkgreen);
     color:  var(--lightyellow);
     background: transparent;
     transition: 3s;
@@ -429,9 +439,7 @@ html{
       }
    
       .header img{
-        width: 25%;
-        margin:   4rem 12rem;
-        
+        width: 25%;        
         align-items: center;
         justify-content: center;
        }
@@ -478,13 +486,14 @@ html{
     }
   
     .text-box{
-        margin-top: 7rem;
+        margin-top: 5rem;
+        line-height: 1.7rem;
     }
     .text-box h2  {
-        font-size:20px;
+        font-size:16px;
         z-index: -1;
-       
        }
+    
 }
 
 h2{
@@ -499,57 +508,7 @@ h3{
     color:#c7c4c4 ; 
     font-weight:100; 
 }
-/* .effect{
-    font-weight: 700px;
-    font-size: 7.5em;
-  }
-  
-  .effect .text-wrapper {
-    position: relative;
-    display: inline-block;
-    padding-top: 0.1em;
-    padding-right: 0.05em;
-    padding-bottom: 0.15em;
-  } */
-  
-  /* .effect .line {
-    opacity: 0;
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 3px;
-   
-    transform-origin: 0 50%;
-  }
-  
-  .effect .line1 { 
-    top: 0; 
-    left: 0;
-  }
-  
-  .effect .letter {
-    display: inline-block;
-    line-height: 1em;
-  } */
 
-  /* 
-  css for h4
-  */
- 
-  
-  
-  /* .ml10 .text-wrapper {
-   
-    display: inline-block;
-  
-    overflow: hidden;
-  }
-  
-  .ml10 .letter {
-    display: inline-block;
-    line-height: 1em;
-    transform-origin: 0 0;
-  } */
 
 .header  .about{
     width: 70%;
@@ -690,7 +649,7 @@ h3{
    
 }
 .portfolio p{
-    font-size: 14px;
+    font-size: 18px;
 }
 .book-col{
     flex-basis: 30%;
@@ -1269,15 +1228,7 @@ h3{
 .about-col p{
     padding:15px 0 25px;
 }
-.red-btn{
-    border:1px solid var(--darkgreen);
-    color:var(--lightyellow);
-    background:transparent;
-}
-.red-btn:hover{
-    color:#3df6ed; 
-    border:1px solid #3df6ed;
-}
+
 
 
 
