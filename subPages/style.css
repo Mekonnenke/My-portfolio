@@ -1,3 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
+* {
+	margin: 0;
+	padding: 0;
+}
+
 *{
     margin:0;
     padding:0;
@@ -6,53 +12,23 @@
    
 }
 :root{
-    --hotgreen: #183323;
-    --darkgreen: #090d09;
+    --hotgreen: #023535;
+    --darkgreen: #011a1a;
     --lightgreen: #B7F9D1;
     --lightyellow: #E8DD54;
-    --midiumgreen: #11b39b;
+    --midiumgreen: #414141;
+    --ticker: #e6d9fa;
   }
 
 body{
     background-color: var(--darkgreen);
    
 }
-.mousemove{
-    min-height: 100vh;
-    width: 100%;
-}
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:600,300);
-* {
-	margin: 0;
-	padding: 0;
-}
 
-.header {
-	
-	background: linear-gradient(
-        45deg, rgba(1, 3, 1, 0.801),
-               rgba(2, 12, 4, 0.7), 
-               rgba(4, 67, 29, 0.7),
-               rgba(4, 10, 4, 0.7), 
-               rgba(16, 67, 25, 0.7)) 0 0 / 1000% no-repeat, 
-               url(../images/hero.JPG) 0 0 / cover no-repeat;
-	-webkit-animation: gradientAnimation 40s ease infinite;
-	animation: gradientAnimation 40s ease infinite;
-}
-@-webkit-keyframes gradientAnimation {
-	0%   { background-position: 0% 30%, 0 0;}
-	50%  { background-position: 100% 70%, 0 0;}
-	100% { background-position: 0% 30%, 0 0;}
-}
-@keyframes gradientAnimation {
-	0%   { background-position: 0% 30%, 0 0;}
-	50%  { background-position: 100% 70%, 0 0;}
-	100% { background-position: 0% 30%, 0 0;}
-}
+
+
+
 .header{
-    
- 
-   
     background-position: center;
     background-size: cover;
     position: relative;
@@ -64,7 +40,7 @@ body{
     width:80%;
 }
 .header .fa{
-    color:var(--lightyellow);
+    color:var(--ticker);
     font-size:22px;
     padding:20px;
     margin: 10px;
@@ -80,8 +56,7 @@ body{
     width:10%;
     flex:start;
     z-index: 3;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
+    
 
 
   
@@ -111,7 +86,7 @@ here to remove all anchore and  list effects which were on nave elements
   
 }
 .nav-links ul li a{
-    color:var(--lightyellow);
+    color:var(--ticker);
     text-decoration: none;
     font-size: 16px;
     text-align:right;
@@ -125,22 +100,7 @@ here to remove all anchore and  list effects which were on nave elements
    
   
 }
-/* 
-.nav-links ul li::after{
-    content:'';
-    width: 0%;
-    height:2px;
-    background:#f7ec56;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
-} */
-/* .nav-links ul li:hover::after{
-    width: 60%;
- 
-  
-} */
-/* toggle three lines for burger menu */
+
 .menu{
     position:absolute;
     top: .15rem;
@@ -152,7 +112,7 @@ here to remove all anchore and  list effects which were on nave elements
     flex-direction: column;
     justify-content:space-between;
     display:none;
-    background-image: linear-gradient(to right, #f3f1a7, #b1ae0a);
+    background-image: linear-gradient(to right, #e5dceb, #dbbce9);
     border-radius:5px;
     cursor: pointer;
     z-index: 3;
@@ -565,11 +525,32 @@ h3{
     margin: auto;
     
     text-align: center;
-    margin-top:  20rem ;
+    margin-top:  10rem ;
 }
+.blog-content{
+    animation-duration: 3s;
+    animation-name: slideout;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+   
+  }
+  @keyframes slideout {
+    from {
+      margin-right: 15%;
+      width: 80%;
+    }
+  
+    to {
+      margin-right: 10%;
+      width: 80%;
+    }
+   
+  }
+
 .blog-content .row{
     padding-top:16rem;
     display:flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     
 }
@@ -587,11 +568,11 @@ h3{
 
 .blog-header h1:nth-child(1) {
 	color: transparent;
-	-webkit-text-stroke: 2px var(--lightyellow);
+	-webkit-text-stroke: 2px var(--ticker);
 }
 
 .blog-header h1:nth-child(2) {
-	color: var(--lightyellow);
+	color: var(--ticker);
 	animation: animate 4s ease-in-out infinite;
 }
 
@@ -629,20 +610,21 @@ h3{
 
 
 
-
 .blog-left img{
     width:60%;
    
 }
 .blog-left h2{
-    color:rgb(184, 183, 183);
+    color: var(--ticker);
     font-weight: 300;
     margin: 30px 0;
+    text-shadow: 0px 1px 2px  var(--hotgreen);
 }
 .blog-left p{
   
     font-size:16px;
     line-height: 2;
+    color: var(--ticker);
 }
 .blog-left h5{
     font-weight: 300;
@@ -650,6 +632,52 @@ h3{
     font-size:12px;
     text-align: left;
 }
+.blog-left{
+    flex-basis:65%;
+}
+
+
+.blog-right{
+    flex-basis:32%;
+}
+.blog-right h3{
+    background:var(--hotgreen);
+    color: var(--lightyellow);
+    padding: 7px 0;
+    font-size: 16px;
+    margin-bottom:20px;
+    font-weight: 300;
+}
+.blog-right div{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(192, 188, 188);
+    padding:8px;
+    box-sizing: border-box;
+}
+.comment-box{
+    border:1px solid #ccc;
+    margin:50px 0;
+    padding:10px 20px;
+}
+.comment-box h3{
+    text-align: left;
+}
+.comment-box .comment-form input, textarea{
+    width:100%;
+    padding:10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    outline:none;
+    background:  #dddde0;
+}
+.comment-box button{
+    margin:10px;
+}
+
+
 .hero-btn a{
     text-decoration: none;
     color:white;
@@ -662,7 +690,7 @@ h3{
 @media(max-width:700px)
 {
     .blog-header h1{
-       font-size:130px;
+       font-size:8rem;
         
     }
     .layers{
@@ -673,6 +701,19 @@ h3{
     width:10%;
     height:70px;
 }
+.blog-left p{
+    font-size:12px;
+}
+.blog-content .row{
+    justify-content: center;
+}
+
+}
+@media(max-width:450px ){
+    .blog-header h1{
+        font-size:4rem;
+         
+     }
 }
 
 @keyframes textclip {
@@ -697,7 +738,7 @@ h3{
     text-align:center;
     padding-top:30px;
     margin-top:12rem;
-    background:var(--darkgreen);
+    background:var(--hotgreen);
     z-index:-3;
   
 
@@ -709,12 +750,13 @@ h3{
     font-weight: 600;
 }
 .icons .fa{
-    color:var(--lightyellow);
+    color:var(--ticker);
     
     font-size: 30px;
     margin: 0 23px;
     cursor:pointer;
     padding:18px 0;
+     text-shadow: 0px 1px 2px  black;
     
 }
 .icons .foot-btn{
@@ -840,74 +882,9 @@ margin-top:10px;
 
 
 
-/*-------blog content------*/
+/* -------blog content------ */
 
 
 
 
-.blog-left{
-    flex-basis:65%;
-}
 
-.blog-left h2{
-    color: var(--lightyellow);
-    font-weight: 300;
-    margin: 30px 0;
-}
-.blog-left h5{
-    font-weight: 300;
-    font-size:12px;
-    color:var(--lightyellow);
-}
-.blog-right{
-    flex-basis:32%;
-}
-.blog-right h3{
-    background:var(--hotgreen);
-    color: var(--lightyellow);
-    padding: 7px 0;
-    font-size: 16px;
-    margin-bottom:20px;
-    font-weight: 300;
-}
-.blog-right div{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    color:rgb(192, 188, 188);
-    padding:8px;
-    box-sizing: border-box;
-}
-.comment-box{
-    border:1px solid #ccc;
-    margin:50px 0;
-    padding:10px 20px;
-}
-.comment-box h3{
-    text-align: left;
-}
-.comment-box .comment-form input, textarea{
-    width:100%;
-    padding:10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border: none;
-    outline:none;
-    background:  #dddde0;
-}
-.comment-box button{
-    margin:10px;
-}
-@media(max-width:700px){
-    .blog-header h1{
-        font-size:170px;
-    }
-    .sub-header h1{
-        font-size:21px;
-    } 
-    .facility-header  h1{
-        font-size:160px;
-        margin-bottom:10rem;
-    }
-        
-}
