@@ -27,7 +27,7 @@ body{
    
 }
 .header{
-    min-height: 100vh;
+    
     width: 100%;
     /* background-position: center;
     background-size: cover;
@@ -68,7 +68,7 @@ body{
 
  .header img{
     margin:7px 70px;
-    width:7%;
+    width:15%;
     flex:start;
     z-index: 4;
     position: fixed; /*Set the navbar to fixed position */
@@ -376,13 +376,15 @@ p{
     align-items: center;
     cursor: pointer;
 }
-@media(max-width: 1400px){
+/*media query*/
+ @media(max-width: 1400px){
 
     .text-box h2{
         font-size: 60px;
     }
 .text-box h3{
     font-size: 40px;
+}
 }
 @media(max-width: 935px){
 
@@ -398,6 +400,7 @@ p{
     text-shadow: 0px 1px 2px  var(--hotgreen);
 }
 }
+
 @media(max-width: 930px){
 
     .text-box h2{
@@ -409,15 +412,16 @@ p{
     font-weight: 300;
 }
 }
+
 @media(max-width: 700px){
 
     .text-box h2{
-        font-size: 25px;
+        font-size: 35px;
         
        
     }
 .text-box h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     font-style: italic;
   
@@ -425,6 +429,7 @@ p{
 .text-box .hero-btn{
     font-size: 12px;
 }
+
 }
 @media(max-width: 440px){
 
@@ -436,6 +441,13 @@ p{
     font-size: 16px;
     font-weight: 300;
 }
+}
+@media(max-width: 1010px){
+    .header img{
+        width: 20%;
+        align-items: center;
+        margin: 7px 7px;
+    }
 }
 
 @media(max-width: 960px)and (min-width: 700px){
@@ -482,9 +494,10 @@ p{
       }
    
       .header img{
-        width: 25%;        
-        align-items: center;
-        justify-content: center;
+        width: 45%;        
+       position: absolute;
+       left: 20%;
+       top:6rem;
        }
  
     .nav-links ul li{
@@ -532,12 +545,9 @@ p{
         margin-top: 5rem;
         line-height: 1.7rem;
     }
-    .text-box h2  {
-        font-size:16px;
-        z-index: -1;
-       }
     
-}
+    
+} 
 
 
 h3{
@@ -556,7 +566,7 @@ h3{
   }
   
   .about:hover p{
-    color: #1bab95;
+    color: #04493f;
   }
   
  
@@ -567,7 +577,7 @@ h3{
     margin: 2rem ;
     text-align:left;
     opacity: 1;  
-    background-color:rgba(127, 222, 171, 0.1);
+    background-color:var(--ticker);
     border-radius: 80px 0px 80px 0px;
     padding:8rem;
     z-index: 9;
@@ -587,8 +597,7 @@ h3{
       }
   }
  
-
-  /*
+/*
 ---work--
 */
 .portfolio{
@@ -1154,10 +1163,6 @@ h3{
 }
 
 
-
-
-
-
 .cta h1{
     color:#fff;
     margin:40px 0;
@@ -1174,6 +1179,7 @@ h3{
     }
 }
 
+
 /*
 ----Footer----
 */
@@ -1182,7 +1188,7 @@ h3{
     text-align:center;
     padding-top:30px;
     margin-top:12rem;
-    background:var(--darkgreen);
+    background:var(--hotgreen);
     z-index:-3;
   
 
@@ -1194,8 +1200,8 @@ h3{
     font-weight: 600;
 }
 .icons .fa{
-    color:var(--lightyellow);
-    
+    color:var(--ticker);
+
     font-size: 30px;
     margin: 0 23px;
     cursor:pointer;
@@ -1223,12 +1229,13 @@ h3{
     color:var(--darkgreen)
 }
 .footer p{
-    color:#11b39b; 
+    color: var(--ticker); 
+    font-size: 14px;
     padding: 30px;
 }
 @media(max-width:700px){
     .icons .fa{
-        color:var(--lightyellow);
+        color:var(--ticker);
         
         font-size: 20px;
         margin: 0 23px;

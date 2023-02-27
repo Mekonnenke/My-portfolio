@@ -17,7 +17,7 @@ html{
     --hotgreen: #023535;
     --darkgreen: #011a1a;
     --lightgreen: #B7F9D1;
-    --lightyellow: #E8DD54;
+    --lightyellow: #11b39b;
     --midiumgreen: #414141;
     --ticker: #e6d9fa;
   }
@@ -68,7 +68,7 @@ body{
 
  .header img{
     margin:7px 70px;
-    width:7%;
+    width:15%;
     flex:start;
     z-index: 4;
     position: fixed; /*Set the navbar to fixed position */
@@ -214,7 +214,7 @@ h1{
     
 }
 p{
-    color: var(--lightgreen);
+    color: var(--lightyellow);
     font-size:20px;  
 }
 .text-box h2 {
@@ -416,12 +416,12 @@ p{
 @media(max-width: 700px){
 
     .text-box h2{
-        font-size: 25px;
+        font-size: 35px;
         
        
     }
 .text-box h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 300;
     font-style: italic;
   
@@ -441,6 +441,13 @@ p{
     font-size: 16px;
     font-weight: 300;
 }
+}
+@media(max-width: 1010px){
+    .header img{
+        width: 20%;
+        align-items: center;
+        margin: 7px 7px;
+    }
 }
 
 @media(max-width: 960px)and (min-width: 700px){
@@ -487,10 +494,10 @@ p{
       }
    
       .header img{
-        width: 15%;        
+        width: 45%;        
        position: absolute;
-       left: 6rem;
-       top:2rem;
+       left: 20%;
+       top:6rem;
        }
  
     .nav-links ul li{
@@ -538,10 +545,7 @@ p{
         margin-top: 5rem;
         line-height: 1.7rem;
     }
-    .text-box h2  {
-        font-size:16px;
-        z-index: -1;
-       }
+    
     
 } 
 
@@ -562,7 +566,7 @@ h3{
   }
   
   .about:hover p{
-    color: #1bab95;
+    color: #04493f;
   }
   
  
@@ -573,7 +577,7 @@ h3{
     margin: 2rem ;
     text-align:left;
     opacity: 1;  
-    background-color:rgba(127, 222, 171, 0.1);
+    background-color:var(--ticker);
     border-radius: 80px 0px 80px 0px;
     padding:8rem;
     z-index: 9;

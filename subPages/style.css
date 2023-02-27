@@ -3,7 +3,6 @@
 	margin: 0;
 	padding: 0;
 }
-
 *{
     margin:0;
     padding:0;
@@ -11,11 +10,14 @@
     box-sizing: border-box;
    
 }
+html{
+    scroll-behavior: smooth;
+}
 :root{
     --hotgreen: #023535;
     --darkgreen: #011a1a;
     --lightgreen: #B7F9D1;
-    --lightyellow: #E8DD54;
+    --lightyellow: #11b39b;
     --midiumgreen: #414141;
     --ticker: #e6d9fa;
   }
@@ -24,19 +26,36 @@ body{
     background-color: var(--darkgreen);
    
 }
-
-
-
-
 .header{
-    background-position: center;
+    min-height: 15rem;
+    width: 100%;
+    /* background-position: center;
     background-size: cover;
-    position: relative;
-    
-    
+    position: relative; */
 }
+.header video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    z-index:-1;
+    background: #000000;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background-color:#dccdf7 ;
+    mix-blend-mode: overlay;
+}
+
 .headre .nav-links{
-    background-color: var(----hotgreen);
+    background-color: var(--hotgreen);
     width:80%;
 }
 .header .fa{
@@ -44,19 +63,17 @@ body{
     font-size:22px;
     padding:20px;
     margin: 10px;
+    text-shadow: 0px 1px 2px  black;
 }
-/* .sub-header .fa{
-    color:#fff;
-    font-size:22px;
-    padding:20px;
-    margin: 10px; 
-} */
+
  .header img{
-    margin:15px 70px;
-    width:10%;
+    margin:7px 70px;
+    width:15%;
     flex:start;
-    z-index: 3;
-    
+    z-index: 4;
+    position: fixed; /*Set the navbar to fixed position */
+     top: 0; /*Position the navbar at the top of the page */
+    text-shadow: 0px 1px 2px  black;
 
 
   
@@ -70,8 +87,9 @@ body{
     padding: 2% 6%;
     justify-content: flex-end;
     margin-bottom:10px;
-      position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
+    position: fixed; /*Set the navbar to fixed position */
+    top: 0;
+    transition: top 0.5s;
     z-index:1;
     
 }
@@ -90,12 +108,13 @@ here to remove all anchore and  list effects which were on nave elements
     text-decoration: none;
     font-size: 16px;
     text-align:right;
+    text-shadow: 0px 1px 2px  black;
     
 }
 .nav-links ul li:hover{
     color:var(--midiumgreen);
     background-color:var(--darkgreen);
-    border-radius: 80px 0px ;
+    border-radius: 80px 0px 80px 0px;
     transition: 0.3s;
    
   
@@ -163,16 +182,13 @@ here to remove all anchore and  list effects which were on nave elements
 }
 
 
-/* 
-this flex displayes logo image behind nave elements */
 
 
 
-
-
+/* about text */
 .text-box{
     width:80%;
-    
+    line-height:2rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -180,45 +196,50 @@ this flex displayes logo image behind nave elements */
     text-align: center;
     margin-top:8rem;
     padding:30px;
-    background-color:rgba(127, 222, 171, 0.1);
+    text-shadow: 2px 3px 2px  black;
+  
      border-radius: 80px 0px 80px 0px;
 }
 
 
 .text-box .text-wrapper{
     color: var( --lightgreen);
+    font-size: 22px;
 }
+
 h1{
     color: var(--midiumgreen);
     font-size:56px;
+
+    
 }
 p{
     color: var(--lightgreen);
     font-size:20px;  
 }
-.text-box h4{
+.text-box h2 {
     margin: 10px 0 20px;
-    font-size:22px;
+    font-size:100px;
     color: var(--lightgreen);
+    font-weight: 450;
     text-align: center;
+    line-height: 1.5;
 }
-/* 
-mousemove css */
-.circle{
-    width:10px; 
-    height:10px;
-    border:1px solid rgb(255, 250, 250);
-    position:absolute;
-    border-radius:25px;
-    background-color:#0d8c79;
+.text-box h3{
+    margin: 10px 0 20px;
+    font-size:62px;
+    color: var(--lightgreen);
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.8;
 }
 
 .hero-btn{
     display: inline-block;
     text-decoration: none;
-    color:var( --midiumgreen);
-    font-size: 13px;
-    border: 1px solid var( --midiumgreen);
+    color:var( --ticker);
+    font-size: 16px;
+    border: 1px solid var( --lightgreen);
     padding: 12px 34px;
     background: transparent;
     position:relative;
@@ -229,31 +250,26 @@ mousemove css */
 }
 
 
-.hebtnro-:hover{
-    border: 1px solid #060a17;
-    color:  var(--darkgreen);
-    background:  var(--midiumgreen);
+.hero-btn:hover{
+    border: 1px solid var(--darkgreen);
+    color:  var(--lightyellow);
+    background: transparent;
     transition: 3s;
 }
-.scroll-down:hover{
-    border: 1px solid #060a17;
-    color:  var(--darkgreen);
-    background:  var(--midiumgreen);
-    transition: 3s;
-}
+
 .scroll-down{
     font-size:20px; 
     border: 1px solid var( --lightgreen);
-    padding: 10px 20px;
+    padding: 10px 15px;
     background: transparent;
     position:relative;
     cursor: pointer;
     display: inline-block;
     text-decoration: none;
-    color: var( --lightgreen);
+    color: var( --ticker);
     border-radius: 50%;
     cursor: pointer;
-    rotate:90deg;
+    display: none;
     margin: 2rem;
     transition: all .10s ease-in-out;
     position: fixed;
@@ -263,7 +279,13 @@ mousemove css */
     z-index: 5;
     
 }
-
+.scroll-down:hover{
+    border: 1px solid #060a17;
+    color:  var(--darkgreen);
+    background:  var(--lightgreen);
+    transition: 3s;
+    font-weight: 300;
+}
 .show {
       visibility: visible;
       opacity: 1;
@@ -277,7 +299,27 @@ mousemove css */
     }
   
   
-     
+   
+ .scroll-down::after{
+    animation-delay: 3s;
+    transform:translate(50%, 50%) rotate(45deg);
+    animation: scroll-down 1s ease-in-out infinite;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity:0;
+        top: 90%;
+    }
+}   
 
 
 .main{
@@ -291,9 +333,7 @@ mousemove css */
 
 
 
-html{
-    scroll-behavior: smooth;
-}
+
 
 /* cookies css */
 .cookie-container{
@@ -336,28 +376,80 @@ html{
     align-items: center;
     cursor: pointer;
 }
+/*media query*/
+ @media(max-width: 1400px){
 
-/* .scroll-down::after{
-    animation-delay: 3s;
-    transform:translate(50%, 50%) rotate(45deg);
-    animation: scroll-down 1s ease-in-out infinite;
+    .text-box h2{
+        font-size: 60px;
+    }
+.text-box h3{
+    font-size: 40px;
 }
-@keyframes scroll-down{
-    0%{
-        opacity: 0;
+}
+@media(max-width: 935px){
+
+    .text-box h2{
+        font-size: 40px;
     }
-    30%{
-        opacity: 1;
+.text-box h3{
+    font-size: 20px;
+}
+.text-box .text-wrapper{
+    color: var( --lightgreen);
+    font-size: 14px;
+    text-shadow: 0px 1px 2px  var(--hotgreen);
+}
+}
+
+@media(max-width: 930px){
+
+    .text-box h2{
+        font-size: 25px;
+       
     }
-    60%{
-        opacity: 1;
+.text-box h3{
+    font-size: 16px;
+    font-weight: 300;
+}
+}
+
+@media(max-width: 700px){
+
+    .text-box h2{
+        font-size: 35px;
+        
+       
     }
-    100%{
-        opacity:0;
-        top: 90%;
+.text-box h3{
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+  
+}
+.text-box .hero-btn{
+    font-size: 12px;
+}
+
+}
+@media(max-width: 440px){
+
+    .text-box h2{
+        font-size: 20px;
+       
     }
-} */
-/* to make slow scroll-down */
+.text-box h3{
+    font-size: 16px;
+    font-weight: 300;
+}
+}
+@media(max-width: 1010px){
+    .header img{
+        width: 20%;
+        align-items: center;
+        margin: 7px 7px;
+    }
+}
+
 @media(max-width: 960px)and (min-width: 700px){
     .nav-links .fa{
         font-size: 15px;
@@ -374,7 +466,7 @@ html{
        
        }
       
-
+     
 }
 
 
@@ -401,8 +493,13 @@ html{
         align-items:flex-start;
       }
    
-    
-    
+      .header img{
+        width: 45%;        
+       position: absolute;
+       left: 20%;
+       top:6rem;
+       }
+ 
     .nav-links ul li{
         display: block;
          flex-direction: column;
@@ -419,7 +516,7 @@ html{
         
        }
        .nav-links ul{
-        padding-top:15rem;
+        padding-top:17rem;
         
        
        }
@@ -433,7 +530,7 @@ html{
     }
 
     .nav-links ul li:hover{
-        border-radius: 0px ;
+        border-radius: 0px;
     }
     .nav-links li a{
         padding: 1rem;
@@ -443,69 +540,62 @@ html{
         display:flex;
         transition: transform 0.20s;
     }
-
-       .header img{
-        margin:20px;
-        width:25%;
-        margin: 6rem 12rem;
-     
-      
-    }
+  
     .text-box{
-         margin-top:5rem;
+        margin-top: 5rem;
+        line-height: 1.7rem;
     }
-    .text-box h2  {
-        font-size:20px;
-        z-index: -1;
-       
-       }
-}
+    
+    
+} 
 
-h2{
-    font-size: 30px;
-    letter-spacing: 5px;
-    margin-bottom:25px;
-    font-weight:200; 
-    color: var(--midiumgreen) 
-}
+
 h3{
     font-size: 13px;
-    color:var(--lightyellow) ; 
+    color:#c7c4c4 ; 
     font-weight:100; 
-    font-weight: 300;
 }
 
 
+.header  .about{
+    width: 70%;
+    margin: auto ;
+   text-align:center;
+   margin-top: 10rem;
 
+  }
+  
+  .about:hover p{
+    color: #04493f;
+  }
+  
+ 
+  .text{
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif; 
+    line-height: 2.5;
+    margin: 2rem ;
+    text-align:left;
+    opacity: 1;  
+    background-color:var(--ticker);
+    border-radius: 80px 0px 80px 0px;
+    padding:8rem;
+    z-index: 9;
+   }
 
-
-
-
-.layer p{
-    color:#060a17;
-    font-size: 16px;
-    font-weight: 500;
-    bottom:0;
-    text-align: center;
-    margin: 10px 0;
-    padding:20px;
-    position: absolute;
-    opacity:0;
-    transition: 0.5s;
-}
-.layer .card-btn{
-    opacity:0;
-}
-.layer:hover p {
-    bottom:20%;
-    opacity:1;
-}
-
-.layer:hover .card-btn {
-    bottom:-80%;
-    opacity:1;
-    width:90%;
-}
+  
+   
+  
+  @media(max-width: 700px){
+    .about h1{
+        font-size:20px;
+    }
+     .about{
+        
+       margin-top: 1rem;
+    
+      }
+  }
 
 
 
